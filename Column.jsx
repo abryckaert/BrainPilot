@@ -1,39 +1,24 @@
 import React from "react";
-import styled from "styled-components";
 import { Droppable } from "react-beautiful-dnd";
-
-const Container = styled.div`
-  background-color: #f4f5f7;
-  border-radius: 2.5px;
-  width: 300px;
-  height: 475px;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  border: 1px solid gray;
-`;
-
-const Title = styled.h3`
-  padding: 8px;
-  background-color: pink;
-  text-align: center;
-`;
-
-const TaskList = styled.div`
-  padding: 3px;
-  transistion: background-color 0.2s ease;
-  background-color: #f4f5f7;
-  flex-grow: 1;
-  min-height: 100px;
-`;
 
 export default function Column() {
   return (
-    <Container>
+    <Container style={{
+      backgroundColor:"#f4f5f7",
+      borderRadius: "2.5px",
+      width:"300px",
+      height:"475px",
+      overflowY :"scroll",
+      scrollbarWith:"none",
+      border:"1px solid gray"
+
+    }}>
         <Title
         style={{
           backgroundColor: "lightblue",
           position: "stick",
+          padding:"8px",
+          textAlign:"center",
         }}
       >
         {title}
@@ -44,6 +29,13 @@ export default function Column() {
             ref={provided.innerRef}
             {...provided.droppableProps}
             isDraggingOver={snapshot.isDraggingOver}
+            style={{
+              padding: "3px",
+              transistion: "backgroundColor 0.2s ease",
+              backgroundColor: "#f4f5f7",
+              flexGrow: "1",
+              minHeight: "100px",
+            }}
           >
             
 

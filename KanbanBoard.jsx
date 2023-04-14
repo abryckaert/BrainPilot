@@ -1,6 +1,4 @@
-import React from "react";
-import { ReactDOM } from "react";
-import App from "./App";
+import React, { useState, useEffect } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 import Column from "./Column";
 
